@@ -1,0 +1,22 @@
+{
+  "name": "att_final",
+  "version": "1.0.0",
+  "description": "Mapping traffic accidents in New York City",
+  "main": "server.js",
+  "scripts": {
+    "build-css": "stylus source/stylesheets/index.styl -o static/css",
+    "watch-css": "stylus source/stylesheets/index.styl -o static/css -w",
+    "clean": "rmdir -rf static\\css && mkdir static\\css",
+    "build": "npm run clean && npm run build-css",
+    "watch": "npm run watch-css & nodemon server -e js,pug",
+    "start": "node server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "pug": "^2.0.3",
+    "stylus": "^0.54.5"
+  }
+}
